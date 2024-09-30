@@ -1,0 +1,11 @@
+NAME: winged-insect
+LAST DEPLOYED: Mon Sep 23 13:52:01 2024
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+NOTES:
+1. Get the application URL by running these commands:
+     NOTE: It may take a few minutes for the LoadBalancer IP to be available.
+           You can watch its status by running 'kubectl get --namespace default svc -w winged-insect-mydemochart'
+           export SERVICE_IP=$(kubectl get svc --namespace default winged-insect-mydemochart --template "{{ range (index .status.loadBalancer.ingress 0) }}{{.}}{{ end }}")
+           echo http://$SERVICE_IP:80
